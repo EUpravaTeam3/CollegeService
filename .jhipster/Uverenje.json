@@ -1,0 +1,54 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "datumIzdavanja",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vaziDo",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vrstaUverenja",
+      "fieldType": "VrstaUvere",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "STATUS_STUDENTA,POLOZEN_ISPIT"
+    }
+  ],
+  "name": "Uverenje",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "sluzbaZaZaposljavanje",
+      "relationshipName": "sluzbaZaZaposljavanje",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "uverenje",
+      "relationshipName": "student",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "sluzbaZaZaposljavanje",
+      "otherEntityRelationshipName": "uverenje",
+      "relationshipName": "sluzbaZaZaposljavanje",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

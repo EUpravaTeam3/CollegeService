@@ -1,0 +1,31 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "naziv",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "adresa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "kontaktInformacije",
+      "fieldType": "String"
+    }
+  ],
+  "name": "SluzbaZaZaposljavanje",
+  "relationships": [
+    {
+      "otherEntityName": "uverenje",
+      "otherEntityRelationshipName": "sluzbaZaZaposljavanje",
+      "relationshipName": "uverenje",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

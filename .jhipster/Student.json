@@ -1,0 +1,56 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ime",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "prezime",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "brojIndeksa",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "brojTelefona",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pol",
+      "fieldType": "Pol",
+      "fieldValues": "MUSKI,ZENSKI"
+    }
+  ],
+  "name": "Student",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "uverenje",
+      "otherEntityRelationshipName": "student",
+      "relationshipName": "uverenje",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "fakultet",
+      "relationshipName": "fakultet",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "fakultet",
+      "otherEntityRelationshipName": "student",
+      "relationshipName": "fakultet",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

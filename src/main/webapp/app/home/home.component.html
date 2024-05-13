@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-3">
+    <span class="hipster img-fluid rounded"></span>
+  </div>
+
+  <div class="col-md-9">
+    <h1 class="display-4"><span>Dobrodošli, Java Hipsteru!</span> (College Service)</h1>
+
+    <p class="lead">Ovo je Vaša početna stranica</p>
+
+    <div>
+      @if (account() !== null) {
+        <div class="alert alert-success">
+          @if (account()) {
+            <span id="home-logged-message">Prijavljeni ste kao korisnik &quot;{{ account()!.login }}&quot;.</span>
+          }
+        </div>
+      } @else {
+        <div class="alert alert-warning">
+          <span>Ako želite da se </span>
+          <a class="alert-link" (click)="login()">prijavite</a
+          ><span
+            >, možete probati sa univerzanlnim korisničkim nalozima:<br />- Administrator (korisničko ime=&quot;admin&quot; i
+            lozinka=&quot;admin&quot;) <br />- User (korisničko ime=&quot;user&quot; i lozinka=&quot;user&quot;).</span
+          >
+        </div>
+      }
+    </div>
+
+    <p>Ako imate bilo kakva pitanja o JHipster-u:</p>
+
+    <ul>
+      <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">JHipster početna stranica</a></li>
+      <li>
+        <a href="https://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">JHipster na Stack Overflow</a>
+      </li>
+      <li>
+        <a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener noreferrer"
+          >JHipster tragač za greškama</a
+        >
+      </li>
+      <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">JHipster javni čet</a></li>
+      <li><a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer">pratite &#64;jhipster na Twitter-u</a></li>
+    </ul>
+
+    <p>
+      <span>Ako Vam se dopada JHipster, ne zaboravite da nam date zvezdicu na</span>
+      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">GitHub-u</a>!
+    </p>
+  </div>
+</div>

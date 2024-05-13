@@ -1,0 +1,38 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "naziv",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "adresa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "kontaktInformacije",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Fakultet",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "otherEntityRelationshipName": "fakultet",
+      "relationshipName": "student",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "predmet",
+      "otherEntityRelationshipName": "fakultet",
+      "relationshipName": "predmet",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

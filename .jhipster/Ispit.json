@@ -1,0 +1,45 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "datum",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ocena",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "StatusIspita",
+      "fieldValues": "POLOZEN,NEPOLOZEN"
+    }
+  ],
+  "name": "Ispit",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "predmet",
+      "relationshipName": "predmet",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "profesor",
+      "relationshipName": "profesor",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "predmet",
+      "otherEntityRelationshipName": "ispit",
+      "relationshipName": "predmet",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

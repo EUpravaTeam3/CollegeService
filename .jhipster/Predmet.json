@@ -1,0 +1,49 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "naziv",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "sifra",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Predmet",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "ispit",
+      "otherEntityRelationshipName": "predmet",
+      "relationshipName": "ispit",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "fakultet",
+      "relationshipName": "fakultet",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "fakultet",
+      "otherEntityRelationshipName": "predmet",
+      "relationshipName": "fakultet",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "profesor",
+      "otherEntityRelationshipName": "predmet",
+      "relationshipName": "profesor",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

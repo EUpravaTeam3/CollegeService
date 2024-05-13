@@ -1,0 +1,40 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ime",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "prezime",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pol",
+      "fieldType": "Pol",
+      "fieldValues": "MUSKI,ZENSKI"
+    }
+  ],
+  "name": "Profesor",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "fakultet",
+      "relationshipName": "fakultet",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "predmet",
+      "otherEntityRelationshipName": "profesor",
+      "relationshipName": "predmet",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
